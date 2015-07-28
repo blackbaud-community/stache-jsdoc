@@ -64,6 +64,7 @@ module.exports = function (grunt) {
 
             // Future implements may need to adjust this
             if (json && json.length === 1) {
+
                 json = json[0];
                 demoFiles.forEach(function (file) {
                     var path = folder + file,
@@ -72,6 +73,10 @@ module.exports = function (grunt) {
                         json[demoPrefix + ext] = grunt.file.read(path);
                     }
                 });
+                
+                if (json[i].name) {
+                    json[i].key = json[i].name.toLowerCase().replace(/ /g, '');
+                }
                 combined.push(json);
             }
         });
