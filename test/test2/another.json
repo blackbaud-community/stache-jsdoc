@@ -1,0 +1,10 @@
+[
+  {
+    "id": "module:Autofocus",
+    "longname": "module:Autofocus",
+    "name": "Autofocus",
+    "kind": "module",
+    "description": "The bb-autofocus directive is used to set focus on a form item when rendered. Use this when the HTML autofocus property behaves finicky with things like angular dynamically loaded templates and such.\nHere focus is set in an in-page form as well as in a modal launched with bbmodal.",
+    "order": 0
+  }
+]

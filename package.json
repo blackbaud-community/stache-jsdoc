@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Blackbaud - Bobby Earl"
+  },
+  "name": "blackbaud-stache-jsdoc",
+  "version": "0.0.1",
+  "description": "Convert JSDoc to Blackbaud Stache",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackbaud-community/stache-jsdoc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blackbaud-community/stache-jsdoc/issues"
+  },
+  "dependencies": {
+    "grunt-jsdoc-to-markdown": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
