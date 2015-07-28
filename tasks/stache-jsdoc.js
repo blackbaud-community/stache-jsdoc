@@ -73,10 +73,21 @@ module.exports = function (grunt) {
                         json[demoPrefix + ext] = grunt.file.read(path);
                     }
                 });
-                
-                if (json[i].name) {
-                    json[i].key = json[i].name.toLowerCase().replace(/ /g, '');
+
+                // Provide stache with a slug-safe key to use
+                if (json.name) {
+                    json.key = json.name.toLowerCase().replace(/ /g, '');
                 }
+
+                // No reason for us to namespace the custom-tags
+                if (json.customTags && json.customTags.length > 0) {
+                    json.customTags.forEach(function (el) {
+                        json[el.tag] = el.value;
+                    });
+                    delete json.customTags;
+                }
+
+                // Keep combining our JSON file
                 combined.push(json);
             }
         });
