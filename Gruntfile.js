@@ -3,8 +3,10 @@ module.exports = function(grunt) {
 
     grunt.config.init({
         stache_jsdoc: {
-            src: 'test/*/*.js',
-            dest: 'test/data.json'
+            options: {
+                src: 'test/*/*.js',
+                dest: 'test/data.json'
+            }
         }
     });
 
