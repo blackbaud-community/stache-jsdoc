@@ -95,4 +95,6 @@ module.exports = function (grunt) {
         grunt.log.writeln('Writing ' + dest);
         grunt.file.write(dest, JSON.stringify(combined, null, 2));
     });
+
+    grunt.task.loadNpmTasks('grunt-jsdoc-to-markdown');
 };
