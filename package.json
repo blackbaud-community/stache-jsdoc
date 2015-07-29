@@ -3,7 +3,7 @@
     "name": "Blackbaud - Bobby Earl"
   },
   "name": "blackbaud-stache-jsdoc",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Convert JSDoc to Blackbaud Stache",
   "repository": {
     "type": "git",
