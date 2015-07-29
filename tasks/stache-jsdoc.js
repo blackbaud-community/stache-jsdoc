@@ -5,28 +5,27 @@
  */
 module.exports = function (grunt) {
 
-    var settings = {},
-        defaults = {
-            tmpPath: '.tmp-convert/',
-            demoPrefix: 'example-',
-            demoFiles: [
-                'docs/demo.html',
-                'docs/demo.js'
-            ],
-            jsdoc2md: {
-                separateOutputFilePerInput: {
-                    options: {
-                        json: true
-                    },
-                    files: [{
-                        expand: true,
-                        ext: '.json',
-                        src: '<%= stache_jsdoc.src %>',
-                        dest: '<%= stache_jsdoc.tmpPath %>'
-                    }]
-                }
+    var defaults = {
+        tmpPath: '.tmp-convert/',
+        demoPrefix: 'example-',
+        demoFiles: [
+            'docs/demo.html',
+            'docs/demo.js'
+        ],
+        jsdoc2md: {
+            separateOutputFilePerInput: {
+                options: {
+                    json: true
+                },
+                files: [{
+                    expand: true,
+                    ext: '.json',
+                    src: '<%= stache_jsdoc.src %>',
+                    dest: '<%= stache_jsdoc.tmpPath %>'
+                }]
             }
-        };
+        }
+    };
 
     /**
      * Grabs the applicable config options from stache-jsdoc and passes them to jsdoc2md task.
