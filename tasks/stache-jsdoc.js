@@ -6,6 +6,7 @@
 module.exports = function (grunt) {
 
     var defaults = {
+        tmpPathRemove: true,
         tmpPath: '.tmp-convert/',
         demoPrefix: 'example-',
         demoFiles: [
@@ -38,11 +39,22 @@ module.exports = function (grunt) {
             grunt.config.set('stache_jsdoc', this.options(defaults));
             grunt.config.set('jsdoc2md', grunt.config.get('stache_jsdoc.jsdoc2md'));
             grunt.task.run([
+                'stache-jsdoc-pre',
                 'jsdoc2md:separateOutputFilePerInput',
                 'stache-jsdoc-post'
             ]);
         }
     );
+
+    /**
+    * Cleans the destination folder if it exist, and if the user hasn't changed the option
+    **/
+    grunt.task.registerTask('stache-jsdoc-pre', function () {
+        var tmpPath = grunt.config.get('stache_jsdoc.tmpPath');
+        if (grunt.config.get('stache_jsdoc.tmpPathRemove') && grunt.file.exists(tmpPath)) {
+            grunt.file.delete(tmpPath);
+        }
+    });
 
     /**
      * The real reason for this package to even exist.
