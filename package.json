@@ -7,10 +7,10 @@
   "description": "Convert JSDoc to Blackbaud Stache",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blackbaud-community/stache-jsdoc.git"
+    "url": "git+https://github.com/blackbaud/stache-jsdoc.git"
   },
   "bugs": {
-    "url": "https://github.com/blackbaud-community/stache-jsdoc/issues"
+    "url": "https://github.com/blackbaud/stache-jsdoc/issues"
   },
   "dependencies": {
     "grunt-jsdoc-to-markdown": "^1.0.0"
